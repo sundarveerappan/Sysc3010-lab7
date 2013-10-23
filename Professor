@@ -1,0 +1,22 @@
+public class Professor extends Person
+{
+   private String office;
+
+   public Professor(String firstName, String lastName) {
+       super(firstName, lastName);
+       office=null;
+    };
+   public void setOffice(String office) {
+       this.office= office;
+    }
+   public String getOffice() { 
+       if(office!=null){
+        return office;
+        }else{
+            return null;
+        }
+    }
+    
+       // You decide if you need toString() and equals()
+}
+
