@@ -1,7 +1,31 @@
-public class Name
-{
-   private String first, last;
-   public Name(String first, String last) {}
-   public String toString() { return null; }
-   public boolean equals(Object o) { return false; }
+public class Name {
+	private String first, last;
+
+	public Name(String first, String last) {
+		this.first = (first == null) ? "" : first;
+		this.last = (last == null) ? "" : last;
+	}
+
+	public String toString() {
+		return first + " " + last;
+	}
+
+	public boolean equals(Object o) {
+		if (o.getClass() != Name.class) {
+			return false;
+		}
+
+		// Note: null values checked at constructor
+
+		Name name2 = (Name) o;
+		if (!first.equals(name2.first)) {
+			return false;
+		}
+
+		if (!last.equals(name2.last)) {
+			return false;
+		}
+
+		return true;
+	}
 }
