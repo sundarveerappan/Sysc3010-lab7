@@ -5,13 +5,25 @@ public class Name {
 		this.first = (first == null) ? "" : first;
 		this.last = (last == null) ? "" : last;
 	}
+	
+	public String getFirstName() {
+		return first;
+	}
+
+	public String getLastName() {
+		return last;
+	}
+	
+	public void setLastName(String last) {
+		this.last = last;
+	}
 
 	public String toString() {
 		return first + " " + last;
 	}
 
 	public boolean equals(Object o) {
-		if (o.getClass() != Name.class) {
+		if (o == null || o.getClass() != Name.class) {
 			return false;
 		}
 

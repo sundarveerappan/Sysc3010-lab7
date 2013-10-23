@@ -19,13 +19,13 @@ public class PersonTest {
 	@Test
 	public void testGetFirstName() {
 		Person p = new Person("First", "Last");
-		assertEquals("First", p.getLastName());
+		assertEquals("First", p.getFirstName());
 	}
 
 	@Test
 	public void testGetFullName() {
 		Person p = new Person("First", "Last");
-		assertEquals("First Last", p.getLastName());
+		assertEquals("First Last", p.getFullName());
 	}
 
 	@Test
